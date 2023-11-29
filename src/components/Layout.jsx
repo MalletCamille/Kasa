@@ -2,6 +2,8 @@ import Header from './Header.jsx';
 import {Fragment} from 'react'
 import Footer from './Footer.jsx'
 
+//@import './JajaStyles.scss';
+
 
 
 function layout({children}) {
