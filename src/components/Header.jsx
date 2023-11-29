@@ -5,11 +5,11 @@ import '../style/Header.scss'
 
 function Header() {
     return (
-        <header>
+        <header className = "header">
                 <img className= "header__logo" src={logokasa} alt="logo Kasa" />
                 <nav className = "header__nav">
-                    <Link to="/">Accueil</Link>
-                    <Link to="/survey/1">A propos</Link>
+                    <Link className='header__link' to="/">Accueil</Link>
+                    <Link className='header__link' to="/About">A Propos</Link>
                 </nav>
         </header>
     )
