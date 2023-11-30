@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-//import colors from '../../utils/style/colors/colors.jsx'
 import logokasa from '../assets/LOGO.svg'
 import '../style/Header.scss'
 

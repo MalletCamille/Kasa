@@ -1,18 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@200&family=Montserrat:wght@500&family=Pacifico&family=Roboto:wght@100&family=Shrikhand&family=Work+Sans&display=swap');
-
-
 .header {
     display : flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 45px;
+    margin-bottom: 50px;
     &__logo {
         display : flex;
         flex-direction : row;
         margin-left : 15px;
         margin-right : 7px;
-        margin-left: 60px;
+        margin-left: 100px;
         height: 68px;
         width: auto;
     }    
@@ -20,7 +17,7 @@
     display: flex;
     flex-direction: row;
     gap : 57px;
-    margin-right: 60px;    
+    margin-right: 100px;    
     }
     &__link {
         text-decoration: none;
