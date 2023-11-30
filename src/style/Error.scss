@@ -1,0 +1,16 @@
+.Error {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    &__img {
+        width: auto;
+        height: 263px;
+    }
+    &__txt {
+        color: black;
+    }
+    &__bachtohome {
+        color: black;
+    }
+}

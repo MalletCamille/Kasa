@@ -1,5 +1,5 @@
 
-function Appartments() {
+function Appartment() {
     return (
 
 <h1>Bel appartement meublé</h1>
@@ -7,4 +7,4 @@ function Appartments() {
   )
 }
 
-export default Appartments
+export default Appartment

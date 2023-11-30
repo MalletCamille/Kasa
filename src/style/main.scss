@@ -1,2 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@200&family=Montserrat:wght@500&family=Pacifico&family=Roboto:wght@100&family=Shrikhand&family=Work+Sans&display=swap');
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    padding-top: 56px;
+    padding-bottom: 43px;
+}
