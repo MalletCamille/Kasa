@@ -11,8 +11,7 @@ function Home() {
       </div>
     <main className='main'>
     {json.map(appartments=> (
-    <Card key={`${appartments.id}`}>
-      {appartments.title}
+    <Card key={`${appartments.id}`} title={appartments.title}>
     </Card>    
       ))}
     </main>  

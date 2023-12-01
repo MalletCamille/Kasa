@@ -1,6 +1,12 @@
+import Banner from '../../components/Banner.jsx'
+
 function About() {
     return (
-  <h1>A propos</h1>
+      <div className="banner__about">
+           <Banner/>
+      </div>
+
+
   )
 }
 

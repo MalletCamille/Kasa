@@ -1,8 +1,15 @@
 import '../style/Card.scss'
+import PropTypes from 'prop-types';
 
-function Card() {
+
+Card.propTypes = {
+    title: PropTypes.string.isRequired
+}
+
+function Card({ title }) {
     return (
         <article className = "card">
+            <h2 className='card__title'>{title}</h2>
         </article>
     )
 }
