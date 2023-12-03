@@ -1,4 +1,3 @@
-//import colors from '../../utils/style/colors/colors.jsx'
 import logokasa from '../assets/LOGO_white.png'
 import '../style/Footer.scss'
 
