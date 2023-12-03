@@ -1,10 +1,14 @@
+import { useParams } from 'react-router-dom';
 
 function Appartment() {
-    return (
+  const { appartmentid } = useParams();
 
-<h1>Bel appartement meublé</h1>
-
-  )
+  return (
+    <div>
+      <h1>Bel appartement meublé</h1>
+      <p>ID de l'appartement : {appartmentid}</p>
+    </div>
+  );
 }
 
-export default Appartment
+export default Appartment;
