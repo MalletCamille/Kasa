@@ -1,6 +1,6 @@
 import '../style/Collapse.scss'
 import arrow from '../assets/arrow.png'
-import React, { Fragment, useState } from 'react';
+import { useState } from 'react';
 
 function Collapse({ collapsename, children }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -10,7 +10,7 @@ function Collapse({ collapsename, children }) {
   }
 
   return (
-   <Fragment>
+   <div className='collapse'>
       <button className="collapse__button" onClick={handleClickArrow}>
         {collapsename} <img className={`collapse__arrow ${isCollapsed ? '--collapsed' : '--expanded'}`} src={arrow} alt="arrow" />
       </button>
@@ -20,7 +20,7 @@ function Collapse({ collapsename, children }) {
           {children}
         </div>
       )}
-    </Fragment>
+    </div>
   );
 }
 
