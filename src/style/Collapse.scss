@@ -1,4 +1,5 @@
 .collapse {
+    &__button {
     background-color: #FF6060;
     color: white;
     padding: 10px 20px 10px 15px;
@@ -13,14 +14,76 @@
     text-align: left;
     display: flex;
     align-items: center;
+    }
     &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
-        margin: 38px;    
     }
     &__arrow {
         margin-left: auto;
+        cursor : pointer;
+    }
+    &__details {
+        background-color: #F6F6F6;
+        border-radius: 10px 10px 5px 5px;
+        width: 1023px;
+        color: #FF6060;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        padding : 20px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        animation : expandeddetails 3s forwards;
+    }
+    &__text {
+        opacity: 0;
+        animation : animtext 1s forwards;
+        animation-delay: 0.5s;
+    }
+
+    .--collapsed {
+        animation : arrowrotatecollapsed 1s forwards;
+    }
+
+    .--expanded {
+        animation : arrowrotateexpanded 1s forwards;
+    }
+
+    @keyframes arrowrotateexpanded {
+        0% {
+            transform : rotate(0deg);
+        }
+        100% {
+            transform : rotate(180deg);
+        }
+    }
+    @keyframes arrowrotatecollapsed {
+        0% {
+            transform : rotate(180deg);
+        }
+        100% {
+            transform : rotate(0deg);
+        }
+    }
+    @keyframes expandeddetails {
+        0% {
+            height: 0px;
+            padding: 0 20px;
+        }
+        100% {
+            height: 272px;
+            padding: 20px;
+        }
+    }
+    @keyframes animtext {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 }
