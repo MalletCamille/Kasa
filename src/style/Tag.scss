@@ -1,0 +1,18 @@
+.tag {
+    &__description {
+        width: 115px;
+        height: 25px;
+        border-radius: 10px;
+        background-color: #FF6060;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
