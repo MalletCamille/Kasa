@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import json from '../../../data/appartments.json'
 import '../../style/Appartment.scss'
 import '../../style/Tag.scss'
+import Collapse from '../../components/Collapse.jsx'
 
 Appartment.propTypes = {
   cover: PropTypes.string.isRequired
@@ -17,16 +18,23 @@ Appartment.propTypes = {
 
   return (
     <div className='appartment__container'>
-      <Slideshow cover={currentappartment.cover} />
-      <h1 className='appartment__title'>{currentappartment.title}</h1>
-      <p className='appartment__location'>{currentappartment.location}</p>
-      <div className='tags__container'>
-      {currentappartment.tags.map((tag, index) => (
-        <Tag key={index} description={tag} className='appartment__tag' />
-      ))}
-      </div>
-
-
+        <Slideshow cover={currentappartment.cover} />
+        <h1 className='appartment__title'>{currentappartment.title}</h1>
+        <p className='appartment__location'>{currentappartment.location}</p>
+        <div className='tags__container'>
+          {currentappartment.tags.map((tag, index) => (
+          <Tag key={index} description={tag} className='appartment__tag' />))}
+        </div>
+        <div className='collapse__container'>
+          <Collapse collapsename="Description">
+          <span className='collapse__text'>{currentappartment.description}</span> 
+          </Collapse>
+        </div>
+        <div className='collapse__container'>
+          <Collapse collapsename="Equipements">
+          <span className='collapse__text'>{currentappartment.equipments}</span> 
+          </Collapse>
+        </div>  
     </div>
   );
 }
