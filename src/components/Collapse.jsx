@@ -2,6 +2,12 @@
 import { useState } from 'react';
 import '../style/Collapse.scss';
 import arrow from '../assets/arrow.png';
+import PropTypes from 'prop-types';
+
+Collapse.propTypes = {
+  collapsename: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired
+}
 
 function Collapse({ collapsename, children }) {
   const [isCollapsed, setIsCollapsed] = useState(true);

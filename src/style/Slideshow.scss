@@ -1,0 +1,24 @@
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__img {
+        width: 1245px;
+        height: 415px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    &__leftarrow {
+        width: 96px;
+        height: auto;
+        left : 140px;
+        position : absolute;
+
+    }
+    &__rightarrow {
+        width: 96px;
+        height: auto;
+        right: 140px;
+        position: absolute;
+    }
+}
