@@ -1,25 +1,26 @@
-import '../style/Collapse.scss'
-import arrow from '../assets/arrow.png'
+// Collapse.jsx
 import { useState } from 'react';
+import '../style/Collapse.scss';
+import arrow from '../assets/arrow.png';
 
 function Collapse({ collapsename, children }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  function handleClickArrow() {
+  const handleClickArrow = () => {
     setIsCollapsed(!isCollapsed);
-  }
+  };
+
+  const detailsClass = `collapse__details ${isCollapsed ? '--collapsed' : '--expanded'}`;
 
   return (
-   <div className='collapse'>
+    <div className='collapse'>
       <button className="collapse__button" onClick={handleClickArrow}>
         {collapsename} <img className={`collapse__arrow ${isCollapsed ? '--collapsed' : '--expanded'}`} src={arrow} alt="arrow" />
       </button>
 
-      {isCollapsed ? null : (
-        <div className="collapse__details">
-          {children}
-        </div>
-      )}
+      <div className={detailsClass}>
+        {children}
+      </div>
     </div>
   );
 }
