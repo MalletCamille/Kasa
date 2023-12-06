@@ -18,21 +18,29 @@ Appartment.propTypes = {
 
   return (
     <div className='appartment__container'>
-        <Slideshow cover={currentappartment.cover} />
-        <h1 className='appartment__title'>{currentappartment.title}</h1>
-        <p className='appartment__location'>{currentappartment.location}</p>
-        <div className='tags__container'>
-          {currentappartment.tags.map((tag, index) => (
-          <Tag key={index} description={tag} className='appartment__tag' />))}
-        </div>
-        <div className='collapse__content'>
-          <Collapse className='collapse' collapsename="Description">
-            <span className='collapse__text'>{currentappartment.description}</span> 
-          </Collapse>
-          <Collapse className='collapse' collapsename="Equipements">
-            <span className='collapse__text'>{currentappartment.equipments}</span> 
-          </Collapse>
+      <Slideshow cover={currentappartment.cover} />
+      <div className='appartment__wrap'>
+        <div className='appartment__infos'>
+          <h1 className='appartment__title'>{currentappartment.title}</h1>
+          <p className='appartment__location'>{currentappartment.location}</p>
         </div>  
+          <div className='host'>
+            <span className='host__name'>{currentappartment.host.name}</span>
+            <img className='host__pix' src={currentappartment.host.picture}></img>  
+          </div>
+      </div>          
+      <div className='tags__container'>
+        {currentappartment.tags.map((tag, index) => (
+        <Tag key={index} description={tag} className='appartment__tag' />))}
+      </div>
+      <div className='collapse__content'>
+        <Collapse className='collapse' collapsename="Description">
+          <span className='collapse__text'>{currentappartment.description}</span> 
+        </Collapse>
+        <Collapse className='collapse' collapsename="Equipements">
+          <span className='collapse__text'>{currentappartment.equipments}</span> 
+        </Collapse>
+        </div>
     </div>
   );
 }
