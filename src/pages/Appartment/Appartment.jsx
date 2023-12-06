@@ -25,14 +25,12 @@ Appartment.propTypes = {
           {currentappartment.tags.map((tag, index) => (
           <Tag key={index} description={tag} className='appartment__tag' />))}
         </div>
-        <div className='collapse__container'>
-          <Collapse collapsename="Description">
-          <span className='collapse__text'>{currentappartment.description}</span> 
+        <div className='collapse__content'>
+          <Collapse className='collapse' collapsename="Description">
+            <span className='collapse__text'>{currentappartment.description}</span> 
           </Collapse>
-        </div>
-        <div className='collapse__container'>
-          <Collapse collapsename="Equipements">
-          <span className='collapse__text'>{currentappartment.equipments}</span> 
+          <Collapse className='collapse' collapsename="Equipements">
+            <span className='collapse__text'>{currentappartment.equipments}</span> 
           </Collapse>
         </div>  
     </div>
