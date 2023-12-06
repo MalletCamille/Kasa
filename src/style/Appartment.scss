@@ -68,5 +68,23 @@
     }
     &__pix {
         border-radius: 100px;
+        width: 64px;
+        height: 64px;
     }
+}
+.hostrating__wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap : 21px;
+}
+.appartmenttags__wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
