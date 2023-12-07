@@ -1,17 +1,16 @@
-import bannerimg from '../assets/Banner_Home.png'
 import '../style/Banner.scss'
 import PropTypes from 'prop-types';
 
 Banner.Proptypes = {
-    Tagline: PropTypes.bool,
+    Tagline: PropTypes.string,
     image : PropTypes.string.isRequired,
 }
 
-function Banner({ Tagline, image }) {
+function Banner({ tagline, image }) {
     return (
         <div className = "banner">
                 <img className="banner__home" src={image} alt="Bannière page d'Accueil" />
-                {Tagline && <span className='banner__tagline'>Chez vous, partout ailleurs</span>}
+                {tagline && <span className='banner__tagline'>{tagline}</span>}
         </div>
     )
 }

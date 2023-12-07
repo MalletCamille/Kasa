@@ -9,7 +9,7 @@ function Home() {
   return (
     <Fragment>
       <div className='banner__container'>
-        <Banner Tagline={true} image={imgbannerhome} />
+        <Banner tagline='Chez vous, partout ailleurs' image={imgbannerhome} />
       </div>
       <main className='main'>
         {json.map(appartments => (

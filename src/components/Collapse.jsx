@@ -5,8 +5,8 @@ import arrow from '../assets/arrow.png';
 import PropTypes from 'prop-types';
 
 Collapse.propTypes = {
-  collapsename: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired
+  collapsename: PropTypes.string,
+  children: PropTypes.node
 }
 
 function Collapse({ collapsename, children }) {

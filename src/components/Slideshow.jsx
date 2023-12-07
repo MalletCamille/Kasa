@@ -5,7 +5,7 @@
 
 
 Slideshow.propTypes = {
-cover: PropTypes.string.isRequired,
+cover: PropTypes.string
 }
 
 function Slideshow({cover}) {

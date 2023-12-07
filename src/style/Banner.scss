@@ -2,6 +2,17 @@
     margin-bottom: 43px;
     display: flex;
     justify-content: center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; bottom: 0;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        overflow: hidden;
+        border-radius: 25px;
+        width: 95%;
+      }
     &__home {
         width: 95%;
         height: 223px;
@@ -21,5 +32,6 @@
         display: flex;
         position: absolute;
         align-self: center;
+        z-index: 2;
     }
 }

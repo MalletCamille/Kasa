@@ -2,7 +2,7 @@ import '../style/Tag.scss'
 import PropTypes from 'prop-types';
 
 Tag.propTypes = {
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string
   };
 
 function Tag({description}) {

@@ -7,6 +7,7 @@ import Error from "./pages/Error/Error.jsx"
 import About from "./pages/About/About.jsx"
 import Layout from './components/Layout.jsx'
 import './style/main.scss'
+import '../data/appartments.json'
 
 const domNode = document.getElementById('root');
 const root = ReactDOM.createRoot(domNode);
