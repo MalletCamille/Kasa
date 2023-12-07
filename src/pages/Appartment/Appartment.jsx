@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import Slideshow from '../../components/Slideshow';
 import Tag from '../../components/Tag';
@@ -9,6 +8,7 @@ import '../../style/Tag.scss';
 import Collapse from '../../components/Collapse.jsx';
 import starfilled from '../../assets/star-active.png';
 import starempty from '../../assets/star-inactive.png';
+import '../../style/Slideshow.scss'
 
 Appartment.propTypes = {
   cover: PropTypes.string
@@ -35,7 +35,7 @@ function Appartment() {
 
   return (
     <div className='appartment__container'>
-      <Slideshow cover={currentappartment.cover} />
+      <Slideshow pictures={currentappartment.pictures} />
       <div className='wrapper'>
         <div className='appartmenttags__wrap'>
           <div className='appartment__infos'>
