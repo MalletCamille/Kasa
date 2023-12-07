@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Slideshow from '../../components/Slideshow';
 import Tag from '../../components/Tag';
 import PropTypes from 'prop-types';
@@ -8,15 +8,28 @@ import '../../style/Tag.scss';
 import Collapse from '../../components/Collapse.jsx';
 import starfilled from '../../assets/star-active.png';
 import starempty from '../../assets/star-inactive.png';
-import '../../style/Slideshow.scss'
+import '../../style/Slideshow.scss';
+import { useEffect } from 'react';
 
 Appartment.propTypes = {
   cover: PropTypes.string
 };
 
 function Appartment() {
+  const navigate = useNavigate();
   const { appartmentid } = useParams();
   const currentappartment = json.find(appartment => appartment.id === appartmentid);
+
+  useEffect(() => {
+    if (!currentappartment) { 
+      navigate("/Error");
+      return;
+    }
+  }, [currentappartment, navigate])
+
+  if (!currentappartment) {
+    return null;
+  }
 
   const renderRatingStars = () => {
     const rating = parseInt(currentappartment.rating);
