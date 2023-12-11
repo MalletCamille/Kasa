@@ -1,0 +1,15 @@
+.about__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .collapse__container {
+        width: 95%;
+    }
+}
+
+/******************** Media queries ********************/
+/* Small devices (phones, less than 768px) */
+// @media (max-width: 768px) {
+
+// }

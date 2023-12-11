@@ -37,9 +37,9 @@ function Appartment() {
 
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
-        stars.push(<img key={i} src={starfilled} alt="Étoile remplie" />);
+        stars.push(<img className='rating__star' key={i} src={starfilled} alt="Étoile remplie" />);
       } else {
-        stars.push(<img key={i} src={starempty} alt="Étoile vide" />);
+        stars.push(<img className='rating__star' key={i} src={starempty} alt="Étoile vide" />);
       }
     }
 
@@ -48,36 +48,38 @@ function Appartment() {
 
   return (
     <div className='appartment__container'>
-      <Slideshow pictures={currentappartment.pictures} />
       <div className='wrapper'>
-        <div className='appartmenttags__wrap'>
-          <div className='appartment__infos'>
-            <h1 className='appartment__title'>{currentappartment.title}</h1>
-            <p className='appartment__location'>{currentappartment.location}</p>
+        <Slideshow pictures={currentappartment.pictures} />
+        <div className='tags-host__container'>
+          <div className='appartmenttags__wrap'>
+            <div className='appartment__infos'>
+              <h1 className='appartment__title'>{currentappartment.title}</h1>
+              <p className='appartment__location'>{currentappartment.location}</p>
+            </div>
+            <div className='tags__container'>
+              {currentappartment.tags.map((tag, index) => (
+                <Tag key={index} description={tag} className='appartment__tag' />
+              ))}
+            </div>
           </div>
-          <div className='tags__container'>
-            {currentappartment.tags.map((tag, index) => (
-              <Tag key={index} description={tag} className='appartment__tag' />
-            ))}
+          <div className='hostrating__wrap'>
+            <div className='host'>
+              <span className='host__name'>{currentappartment.host.name}</span>
+              <img className='host__pix' src={currentappartment.host.picture} alt="Photo de l'hôte" />
+            </div>
+            <div className='rating__container'>
+              {renderRatingStars()}
+            </div>
           </div>
         </div>
-        <div className='hostrating__wrap'>
-          <div className='host'>
-            <span className='host__name'>{currentappartment.host.name}</span>
-            <img className='host__pix' src={currentappartment.host.picture} alt="Photo de l'hôte" />
-          </div>
-          <div className='rating__container'>
-            {renderRatingStars()}
-          </div>
+        <div className='collapse__content'>
+          <Collapse className='collapse' collapsename="Description">
+            <span className='collapse__text'>{currentappartment.description}</span>
+          </Collapse>
+          <Collapse className='collapse' collapsename="Equipements">
+            <span className='collapse__text'>{currentappartment.equipments}</span>
+          </Collapse>
         </div>
-      </div>
-      <div className='collapse__content'>
-        <Collapse className='collapse' collapsename="Description">
-          <span className='collapse__text'>{currentappartment.description}</span>
-        </Collapse>
-        <Collapse className='collapse' collapsename="Equipements">
-          <span className='collapse__text'>{currentappartment.equipments}</span>
-        </Collapse>
       </div>
     </div>
   );

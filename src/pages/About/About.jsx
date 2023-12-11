@@ -1,12 +1,12 @@
 import Banner from '../../components/Banner.jsx'
 import imgbannerabout from '../../assets/Banner_About.png'
 import Collapse from '../../components/Collapse.jsx'
-import { Fragment } from 'react'
+import '../../style/About.scss'
 import '../../style/Collapse.scss'
 
 function About() {
     return (
-      <Fragment>
+      <div className='about__wrapper'>
         <div className="banner__about">
            <Banner Tagline={false} image={imgbannerabout} />
         </div>
@@ -24,7 +24,7 @@ function About() {
             <span className="collapse__text">La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes</span>
           </Collapse>
         </div>
-     </Fragment> 
+     </div> 
   )
 }
 

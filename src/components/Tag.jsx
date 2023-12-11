@@ -7,9 +7,7 @@ Tag.propTypes = {
 
 function Tag({description}) {
     return (    
-        <div className='tag'>
             <span className='tag__description'>{description}</span>
-        </div>        
     )
 }
 

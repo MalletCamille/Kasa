@@ -16,3 +16,18 @@
         padding-bottom: 5px;
     }
 }
+
+/******************** Media queries ********************/
+/* Small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+
+    .tag {
+        &__description {
+            font-size: 10px;
+            width: 84px;
+            height: 18px;
+            padding: 0px;
+        }
+    }
+
+}    
