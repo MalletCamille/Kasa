@@ -35,3 +35,35 @@
         z-index: 2;
     }
 }
+
+/******************** Media queries ********************/
+/* Small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+    .banner {
+        margin-bottom: 22px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 80%;
+        height: 111px;
+        &::before {
+            width: 80%px;
+            height: 111px;
+          }
+        &__home {
+            width: 80%px;
+            height: 111px;
+            object-fit: cover;
+            border-radius: 25px;
+        }    
+        &__container {
+            flex-direction: row;
+            justify-content: center;
+        }
+        &__tagline {
+            font-size: 24px;
+            line-height: 24px;
+            margin-left: 16px; 
+            margin-right: 20%;
+        }    
+    }
+}    
