@@ -24,6 +24,19 @@
         position: absolute;
         cursor: pointer;
     }
+    &__indicator {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.60);
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 18px;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
 }
 
 /******************** Media queries ********************/

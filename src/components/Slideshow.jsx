@@ -45,6 +45,9 @@ function Slideshow({ pictures }) {
         alt='flèche droite'
         onClick={goToNextSlide}
       />
+      <div className='slideshow__indicator'>
+        {currentIndex + 1}/{pictures.length}
+      </div> 
     </div>
   );
 }

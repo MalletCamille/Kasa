@@ -14,7 +14,7 @@ function Home() {
       <main className='main'>
         {json.map(appartments => (
           <Link to={`/Appartment/${appartments.id}`} key={appartments.id} cover={appartments.cover}>
-            <Card title={appartments.title}cover={appartments.cover}>
+            <Card title={appartments.title} cover={appartments.cover}>
             </Card>
           </Link>
         ))}

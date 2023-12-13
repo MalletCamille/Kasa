@@ -1,8 +1,8 @@
 import '../style/Banner.scss'
 import PropTypes from 'prop-types';
 
-Banner.Proptypes = {
-    Tagline: PropTypes.string,
+Banner.propTypes = {
+    tagline: PropTypes.string,
     image : PropTypes.string.isRequired,
 }
 

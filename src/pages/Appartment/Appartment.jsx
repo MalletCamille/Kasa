@@ -76,12 +76,16 @@ function Appartment() {
           </div>
         </div>
         <div className='collapse__content'>
-          <Collapse className='collapse' collapsename="Description">
-            <span className='collapse__text'>{currentappartment.description}</span>
-          </Collapse>
-          <Collapse className='collapse' collapsename="Equipements">
-            <span className='collapse__text'>{currentappartment.equipments}</span>
-          </Collapse>
+        <Collapse className='collapse' collapsename="Description">
+          <span className='collapse__text'>{currentappartment.description}</span>
+        </Collapse>
+        <Collapse className='collapse collapse__equipments' collapsename="Equipements">
+          <div className='collapse__text'>
+            {currentappartment.equipments.map((equipment, index) => (
+              <div key={index}>{equipment}</div>
+            ))}
+          </div>
+        </Collapse>
         </div>
       </div>
     </div>
