@@ -11,6 +11,7 @@ import starempty from '../../assets/star-inactive.png';
 import '../../style/Slideshow.scss';
 import { useEffect } from 'react';
 
+//* Définition du type de propriété attendue pour le composant Appartment *//
 Appartment.propTypes = {
   cover: PropTypes.string
 };
@@ -18,8 +19,10 @@ Appartment.propTypes = {
 function Appartment() {
   const navigate = useNavigate();
   const { appartmentid } = useParams();
+   //* Recherche de l'appartement actuel dans les données JSON en fonction de l'ID fourni dans l'URL *//
   const currentappartment = json.find(appartment => appartment.id === appartmentid);
 
+  //* Utilisation de useEffect pour gérer la navigation vers la page d'erreur si l'appartement n'est pas trouvé *//
   useEffect(() => {
     if (!currentappartment) { 
       navigate("/Error");
@@ -30,7 +33,7 @@ function Appartment() {
   if (!currentappartment) {
     return null;
   }
-
+//* Fonction pour rendre les étoiles de notation en fonction du rating de l'appartement *//
   const renderRatingStars = () => {
     const rating = parseInt(currentappartment.rating);
     const stars = [];
