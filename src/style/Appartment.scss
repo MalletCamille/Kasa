@@ -102,97 +102,43 @@
 
     .appartment {
         &__container {
-            display: flex;
-            flex-direction: column;
             align-items: center;
             width: 100%;
             margin-left: 0px;
             margin-right: 0px;
         }
         &__wrap {
-            display: flex;
             flex-direction: column;
-            justify-content: space-between;
-        }
-        &__infos {
-            display: flex;
-            flex-direction: column;     
         }
         &__title {
-            font-family: 'Montserrat', sans-serif;
             font-size: 18px;
-            font-weight: 500;
             line-height: initial;
-            color: #FF6060;
             margin-top: 15px;
         }
         &__location {
-            font-family: 'Montserrat', sans-serif;
             font-size: 14px;
-            font-weight: 500;
-            line-height: 26px;
             color: #FF6060;
-            display: flex;
-            justify-content: flex-start;
         }
     }
-    
-    .tags__container {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        margin-top: 20px;
-        margin-bottom: 24px;
-    }
-    
+        
     .collapse__content {
-        display: flex;
         flex-direction: column;
-        gap : 76px;
-    }
-    
-    .collapse {
-        width: 47%;
     }
     
     .host {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
         margin-top: 0px;
-        align-items: center;
-        gap: 10px;
-        &__name {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 26px;
-            color: #FF6060;
-            text-align: right;
-        }
         &__pix {
-            border-radius: 100px;
             width: 32px;
             height: 32px;
         }
     }
     .hostrating__wrap {
-        display: flex;
         flex-direction: row-reverse;
-        text-align: right;
-        gap : 21px;
         justify-content: space-between;
         align-items: center;
     }
-    .appartmenttags__wrap {
-        display: flex;
-        flex-direction: column;
-    }
     
     .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         width: 95%;
     }
 
