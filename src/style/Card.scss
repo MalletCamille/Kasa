@@ -46,23 +46,5 @@
     width: 95%;
     height: auto;
     margin-left: 10px;
-    &__title {
-        font-size: 18px;
-        line-height: 26px;
-        bottom: 20px;
-        left: 20px;
-        margin-right: 20px;
-        z-index: 2;
-    }
-
-    &__img {
-      height: 100%;
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      position: relative;
-    }
-}
-
-
+  }
 } 
