@@ -30,24 +30,34 @@ function Slideshow({ pictures }) {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
   };
 
+  const shouldShowControls = pictures && pictures.length > 1;
+
   return (
     <div className='slideshow'>
-      <img className='slideshow__img' src={pictures[currentIndex]} alt='image du Carrousel' />
-      <img
-        className='slideshow__leftarrow'
-        src={leftarrow}
-        alt='flèche gauche'
-        onClick={goToPrevSlide}
-      />
-      <img
-        className='slideshow__rightarrow'
-        src={rightarrow}
-        alt='flèche droite'
-        onClick={goToNextSlide}
-      />
-      <div className='slideshow__indicator'>
-        {currentIndex + 1}/{pictures.length}
-      </div> 
+      {pictures && (
+        <>
+          <img className='slideshow__img' src={pictures[currentIndex]} alt='image du Carrousel' />
+          {shouldShowControls && (
+            <>
+              <img
+                className='slideshow__leftarrow'
+                src={leftarrow}
+                alt='flèche gauche'
+                onClick={goToPrevSlide}
+              />
+              <img
+                className='slideshow__rightarrow'
+                src={rightarrow}
+                alt='flèche droite'
+                onClick={goToNextSlide}
+              />
+              <div className='slideshow__indicator'>
+                {currentIndex + 1}/{pictures.length}
+              </div>
+            </>
+          )}
+        </>
+      )}
     </div>
   );
 }
