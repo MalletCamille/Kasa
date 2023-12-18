@@ -30,6 +30,7 @@ function Slideshow({ pictures }) {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
   };
 
+  // On vérifie si le tableau des pictures existe pour l'appartement en cours dans le json et si l'appartement possède plusieurs images // 
   const shouldShowControls = pictures && pictures.length > 1;
 
   return (
