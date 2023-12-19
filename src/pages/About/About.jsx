@@ -8,7 +8,7 @@ function About() {
     return (
       <div className='about__wrapper'>
         <div className="banner__about">
-           <Banner Tagline={false} image={imgbannerabout} />
+           <Banner image={imgbannerabout} />
         </div>
         <div className='collapse__container'>
           <Collapse collapsename="Fiabilité">

@@ -6,7 +6,7 @@ import '../style/Slideshow.scss';
 
 //* Définition des types attendus du composant Slideshow *//
 Slideshow.propTypes = {
-  pictures: PropTypes.arrayOf(PropTypes.string), //* PropTypes.arrayof est une fonction fournie par la bibliothèque prop-types. *//
+  pictures: PropTypes.arrayOf(PropTypes.string).isRequired, //* PropTypes.arrayof est une fonction fournie par la bibliothèque prop-types. *//
   //* Elle est utilisée pour spécifier que la propriété doit être un tableau. *//
 };
 
